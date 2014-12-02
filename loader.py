@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify, redirect
+from flask import Flask, request, jsonify, redirect, url_for, make_response
 from util.balancer import Balancer
 from flask.ext.noextref import NoExtRef
 #from flaskext.noextref import NoExtRef
@@ -16,7 +16,10 @@ def home():
 
 def teste():
 #     return redirect('http://uol.com.br')
-    return noext.go_to_url('http://uol.com.br')
+#     return noext.go_to_url('http://uol.com.br')
+#     url_for('', url='http://uol.com.br')
+      response = make_response(redirect('http://uol.com.br'))
+      return response
 
 noext = NoExtRef(app, rule='/go/', view_func=teste)
 
