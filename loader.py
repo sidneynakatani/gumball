@@ -10,7 +10,7 @@ def home():
     
     host =  b1.host_selector()
     b1.change_host()
-    return redirect(host) 
+    return redirect(host, 301) 
 
 
 if __name__ == '__main__':
