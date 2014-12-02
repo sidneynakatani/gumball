@@ -1,9 +1,10 @@
 from flask import Flask, request, jsonify, redirect
 from util.balancer import Balancer
-
+from flaskext.noextref import NoExtRef
 
 app = Flask(__name__)
 b1 = Balancer()
+noext = NoExtRef(app)
 
 @app.route('/')
 def home():
@@ -15,7 +16,7 @@ def home():
 
 @app.route('/teste')
 def teste():
-    app.add_url_rule('/teste', 'teste', 'http://google.com')
+    noext.hide_url('http://google.com')
 
 if __name__ == '__main__':
     app.run(debug=True)
