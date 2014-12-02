@@ -13,5 +13,9 @@ def home():
     return redirect(host, 301) 
 
 
+@app.route('/teste')
+def teste():
+    app.add_url_rule('/teste', 'teste', 'http://google.com')
+
 if __name__ == '__main__':
     app.run(debug=True)
