@@ -1,6 +1,6 @@
 from flask import Flask, request, jsonify, redirect
 from util.balancer import Balancer
-from flaskext.noextref import NoExtRef
+from flask.ext.noextref import NoExtRef
 
 app = Flask(__name__)
 b1 = Balancer()
