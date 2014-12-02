@@ -5,7 +5,6 @@ from flask.ext.noextref import NoExtRef
 
 app = Flask(__name__)
 b1 = Balancer()
-app.test_request_context().push()
 
 @app.route('/')
 def home():
