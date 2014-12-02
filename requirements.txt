@@ -46,4 +46,4 @@ pyxdg==0.25
 reportlab==2.6
 requests==2.2.1
 wsgiref==0.1.2
-
+flask-noextref==0.1
