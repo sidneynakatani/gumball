@@ -15,8 +15,8 @@ def home():
 
 
 def teste():
-     return redirect('http://uol.com.br')
-#    return noext.go_to_url('http://uol.com.br')
+#     return redirect('http://uol.com.br')
+    return noext.go_to_url('http://uol.com.br')
 
 noext = NoExtRef(app, rule='/go/', view_func=teste)
 
